@@ -28,7 +28,7 @@ async function main() {
     console.log(events.length, 'events found');
 
     console.log('searching ticket types...');
-    const ticketTypes = await eventService.searchScreeningEventTicketTyps({ eventId: events[0].id });
+    const ticketTypes = await eventService.searchScreeningEventTicketTypes({ eventId: events[0].id });
     console.log('ticketTypes:', ticketTypes);
 
     console.log('searching offers...');

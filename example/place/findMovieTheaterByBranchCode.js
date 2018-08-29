@@ -1,9 +1,8 @@
 /**
- * 映画検索サンプル
+ * 劇場検索サンプル
  */
 const auth = require('../auth');
 const client = require('../../lib/');
-const moment = require('moment');
 
 async function main() {
     const authClient = await auth.login();
@@ -11,16 +10,16 @@ async function main() {
     const loginTicket = authClient.verifyIdToken({});
     console.log('username is', loginTicket.getUsername());
 
-    const creativeWorkService = new client.service.CreativeWork({
+    const placeService = new client.service.Place({
         endpoint: process.env.TEST_API_ENDPOINT,
         auth: authClient
     });
 
-    console.log('searching...');
-    const { totalCount, data } = await creativeWorkService.searchMovies({
-        // identifier: movie.identifierf
+    console.log('finding movieTheater...');
+    const movieTheater = await placeService.findMovieTheaterByBranchCode({
+        branchCode: '118'
     });
-    console.log(totalCount, 'found', data);
+    console.log('movieTheater found', movieTheater);
 }
 
 main().then(() => {

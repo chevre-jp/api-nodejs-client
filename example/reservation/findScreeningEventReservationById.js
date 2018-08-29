@@ -1,9 +1,8 @@
 /**
- * 映画検索サンプル
+ * 上映イベント予約検索サンプル
  */
 const auth = require('../auth');
 const client = require('../../lib/');
-const moment = require('moment');
 
 async function main() {
     const authClient = await auth.login();
@@ -11,16 +10,16 @@ async function main() {
     const loginTicket = authClient.verifyIdToken({});
     console.log('username is', loginTicket.getUsername());
 
-    const creativeWorkService = new client.service.CreativeWork({
+    const reservationService = new client.service.Reservation({
         endpoint: process.env.TEST_API_ENDPOINT,
         auth: authClient
     });
 
-    console.log('searching...');
-    const { totalCount, data } = await creativeWorkService.searchMovies({
-        // identifier: movie.identifierf
+    console.log('searching reservations...');
+    const reservation = await reservationService.findScreeningEventReservationById({
+        id: '118-180814-000007-0',
     });
-    console.log(totalCount, 'found', data);
+    console.log('reservations found', reservation);
 }
 
 main().then(() => {

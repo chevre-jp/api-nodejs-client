@@ -11,7 +11,7 @@ import { Auth, transporters } from '@chevre/api-abstract-client';
 import ICredentials from './credentials';
 import { ITokenPayload, LoginTicket } from './loginTicket';
 
-const debug = createDebug('chevre-api-nodejs-client:*');
+const debug = createDebug('chevre-api-nodejs-client:auth');
 
 export interface IGenerateAuthUrlOpts {
     scopes: string[];

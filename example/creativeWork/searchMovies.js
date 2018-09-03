@@ -3,7 +3,6 @@
  */
 const auth = require('../auth');
 const client = require('../../lib/');
-const moment = require('moment');
 
 async function main() {
     const authClient = await auth.login();
@@ -18,9 +17,14 @@ async function main() {
 
     console.log('searching...');
     const { totalCount, data } = await creativeWorkService.searchMovies({
-        // identifier: movie.identifierf
+        limit: 10,
+        sort: {
+            identifier: client.factory.sortType.Ascending
+        }
     });
-    console.log(totalCount, 'found', data);
+    console.log(data.map((e) => e.identifier).join('\n'));
+    console.log(totalCount, 'found');
+    console.log(data.length, 'returned');
 }
 
 main().then(() => {

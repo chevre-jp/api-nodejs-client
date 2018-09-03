@@ -18,14 +18,21 @@ async function main() {
 
     console.log('searching events...');
     const { totalCount, data } = await eventService.searchScreeningEvents({
-        startFrom: new Date(),
-        endThrough: moment().add(1, 'month').toDate()
+        inSessionFrom: new Date(),
+        inSessionThrough: moment().add(1, 'month').toDate(),
+        // superEvent: { ids: ['7i9927kjky5ts19'] },
+        limit: 10,
+        sort: {
+            startDate: client.factory.sortType.Descending
+        }
     });
+    console.log(data.map((e) => e.startDate).join('\n'));
     console.log(totalCount, 'events found');
+    console.log(data.length, 'events returned');
 
     console.log('searching offers...');
     const offers = await eventService.searchScreeningEventOffers({ eventId: data[0].id });
-    console.log('offers:', offers);
+    console.log(offers.length, 'offers found');
 }
 
 main().then(() => {

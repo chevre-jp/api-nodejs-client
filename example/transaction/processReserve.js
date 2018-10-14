@@ -30,12 +30,19 @@ async function main() {
 
     console.log('searching ticket types...');
     const ticketOffers = await eventService.searchScreeningEventTicketOffers({ eventId: selectedEvent.id });
+    console.log('ticketOffers found', ticketOffers)
     console.log('チケットオファーは以下の通りです')
     console.log(ticketOffers.map((o) => {
-        const videoFormatCharge = o.priceSpecification
+        const unitPriceSpecification = o.priceSpecification.priceComponent
+            .filter((s) => s.typeOf === client.factory.priceSpecificationType.UnitPriceSpecification)
+            .shift();
+        const videoFormatCharge = o.priceSpecification.priceComponent
             .filter((s) => s.typeOf === client.factory.priceSpecificationType.VideoFormatChargeSpecification)
             .map((s) => `+${s.appliesToVideoFormat}チャージ:${s.price} ${s.priceCurrency}`).join(' ')
-        return `${o.id} ${o.name.ja} ${o.price} ${o.priceCurrency} ${videoFormatCharge}`
+        const soundFormatCharge = o.priceSpecification.priceComponent
+            .filter((s) => s.typeOf === client.factory.priceSpecificationType.SoundFormatChargeSpecification)
+            .map((s) => `+${s.appliesToSoundFormat}チャージ:${s.price} ${s.priceCurrency}`).join(' ')
+        return `${o.id} ${o.name.ja} ${unitPriceSpecification.price} ${o.priceCurrency} ${videoFormatCharge} ${soundFormatCharge}`
     }).join('\n'));
 
     console.log('searching offers...');
@@ -49,7 +56,7 @@ async function main() {
     const selectedSectionOffer = offers[0];
     const selectedSeatOffer = availableSeatOffers[0];
     const selectedTicketOffer = ticketOffers[0];
-    console.log('reserving...', selectedEvent.id, selectedSectionOffer.branchCode, selectedSeatOffer.branchCode, selectedTicketOffer.identifier);
+    console.log('reserving...', selectedEvent.id, selectedSectionOffer.branchCode, selectedSeatOffer.branchCode, selectedTicketOffer.id);
 
     console.log('starting transaction...');
     let transaction = await reserveService.start({
@@ -76,7 +83,7 @@ async function main() {
         expires: moment().add(5, 'minutes').toDate()
     });
     console.log('transaction started', transaction.id);
-    console.log('予約を開始しました');
+    console.log('予約を開始しました', transaction.object.reservations.map((r) => r.price).join(','));
     console.log(transaction.object.reservations.map((r) => {
         return `${r.id} ${r.reservationNumber} ${r.reservationStatus} ${r.reservedTicket.underName.name}`
     }).join('\n'));
@@ -113,7 +120,7 @@ async function main() {
         expires: moment().add(5, 'minutes').toDate()
     });
     console.log('transaction started', transaction.id);
-    console.log('予約を開始しました');
+    console.log('予約を開始しました', transaction.object.reservations.map((r) => r.price).join(','));
     console.log(transaction.object.reservations.map((r) => {
         return `${r.id} ${r.reservationNumber} ${r.reservationStatus} ${r.reservedTicket.underName.name}`
     }).join('\n'));

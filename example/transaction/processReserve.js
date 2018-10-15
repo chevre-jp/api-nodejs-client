@@ -26,11 +26,12 @@ async function main() {
         inSessionThrough: moment().add(1, 'month').toDate()
     });
     console.log(events.totalCount, 'events found');
-    const selectedEvent = events.data[0];
+    // const selectedEvent = events.data[0];
+    const selectedEvent = { id: '7iri324jn9lq4av' };
 
     console.log('searching ticket types...');
     const ticketOffers = await eventService.searchScreeningEventTicketOffers({ eventId: selectedEvent.id });
-    console.log('ticketOffers found', ticketOffers)
+    console.log('ticketOffers found', ticketOffers.map((o) => o.priceSpecification.priceComponent))
     console.log('チケットオファーは以下の通りです')
     console.log(ticketOffers.map((o) => {
         const unitPriceSpecification = o.priceSpecification.priceComponent
@@ -42,7 +43,11 @@ async function main() {
         const soundFormatCharge = o.priceSpecification.priceComponent
             .filter((s) => s.typeOf === client.factory.priceSpecificationType.SoundFormatChargeSpecification)
             .map((s) => `+${s.appliesToSoundFormat}チャージ:${s.price} ${s.priceCurrency}`).join(' ')
-        return `${o.id} ${o.name.ja} ${unitPriceSpecification.price} ${o.priceCurrency} ${videoFormatCharge} ${soundFormatCharge}`
+        const mvtkCharge = o.priceSpecification.priceComponent
+            .filter((s) => s.typeOf === client.factory.priceSpecificationType.MovieTicketTypeChargeSpecification)
+            .map((s) => `+${s.appliesToVideoFormat}チャージ:${s.price} ${s.priceCurrency}`).join(' ')
+
+        return `${o.id} ${o.name.ja} ${unitPriceSpecification.price} ${o.priceCurrency} ${videoFormatCharge} ${soundFormatCharge} ${mvtkCharge}`
     }).join('\n'));
 
     console.log('searching offers...');
@@ -55,7 +60,7 @@ async function main() {
 
     const selectedSectionOffer = offers[0];
     const selectedSeatOffer = availableSeatOffers[0];
-    const selectedTicketOffer = ticketOffers[0];
+    const selectedTicketOffer = ticketOffers[Math.floor(ticketOffers.length * Math.random())];
     console.log('reserving...', selectedEvent.id, selectedSectionOffer.branchCode, selectedSeatOffer.branchCode, selectedTicketOffer.id);
 
     console.log('starting transaction...');

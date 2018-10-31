@@ -1,5 +1,5 @@
 /**
- * 上映イベント予約検索サンプル
+ * イベント入場サンプル
  */
 const client = require('../../lib/');
 
@@ -16,11 +16,11 @@ async function main() {
         auth: authClient
     });
 
-    console.log('searching reservations...');
-    const reservation = await reservationService.findScreeningEventReservationById({
+    console.log('attending in...');
+    await reservationService.attendScreeningEvent({
         id: '002-181030-000001-0',
     });
-    console.log('reservations found', reservation);
+    console.log('attended');
 }
 
 main().then(() => {

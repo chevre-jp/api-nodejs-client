@@ -27,7 +27,7 @@ async function main() {
     });
     console.log(events.totalCount, 'events found');
     // const selectedEvent = events.data[0];
-    const selectedEvent = { id: '7iri324jn9lq4av' };
+    const selectedEvent = { id: '405gzm3ojoeupj5j' };
 
     console.log('searching ticket types...');
     const ticketOffers = await eventService.searchScreeningEventTicketOffers({ eventId: selectedEvent.id });
@@ -97,7 +97,7 @@ async function main() {
 
     // 中止
     await reserveService.cancel({
-        transactionId: transaction.id
+        id: transaction.id
     });
     console.log('transaction canceled');
 
@@ -133,7 +133,40 @@ async function main() {
 
     // 確定
     await reserveService.confirm({
-        transactionId: transaction.id
+        id: transaction.id,
+        object: {
+            reservations: transaction.object.reservations.map((r) => {
+                return {
+                    id: r.id,
+                    reservedTicket: {
+                        issuedBy: {
+                            typeOf: 'Organization',
+                            name: 'Motion Theater',
+                            additionalName: 'additionalName',
+                            identifier: [{
+                                name: 'branchCode',
+                                value: '123'
+                            }],
+                            telephone: '+81312345678'
+                        }
+                    },
+                    underName: {
+                        typeOf: 'Person',
+                        name: 'Motion Taro',
+                        additionalName: 'additionalName',
+                        identifier: [{
+                            name: 'orderNumber',
+                            value: '12345'
+                        }],
+                        email: 'hello@motionpicture.jp',
+                        familyName: 'Motion',
+                        gender: 'Female',
+                        givenName: 'Taro',
+                        telephone: '+819012345678'
+                    }
+                }
+            })
+        }
     });
     console.log('transaction confirmed');
 }

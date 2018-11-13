@@ -29,7 +29,7 @@ async function main() {
         },
         object: {
             transaction: {
-                id: '5b73cc2df45974182813a762'
+                id: '5bea4bcfb90bcb3e40c95184'
             }
         },
         expires: moment().add(5, 'minutes').toDate()
@@ -40,7 +40,7 @@ async function main() {
 
     // 確定
     const result = await cancelReservationService.confirm({
-        transactionId: transaction.id
+        id: transaction.id
     });
     console.log('transaction confirmed', result);
 }

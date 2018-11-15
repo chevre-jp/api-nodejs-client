@@ -18,7 +18,7 @@ async function main() {
 
     console.log('searching offers...');
     const offers = await eventService.searchScreeningEventTicketOffers({ eventId: '2of644jo71xsqb' });
-    console.log(offers.length, 'offers found');
+    console.log(offers);
 }
 
 main().then(() => {

@@ -26,8 +26,8 @@ async function main() {
         inSessionThrough: moment().add(1, 'month').toDate()
     });
     console.log(events.totalCount, 'events found');
-    // const selectedEvent = events.data[0];
-    const selectedEvent = { id: '405gzm3ojoeupj5j' };
+    const selectedEvent = events.data[0];
+    // const selectedEvent = { id: '405gzo3sjooz2tmo' };
 
     console.log('searching ticket types...');
     const ticketOffers = await eventService.searchScreeningEventTicketOffers({ eventId: selectedEvent.id });
@@ -88,7 +88,7 @@ async function main() {
         expires: moment().add(5, 'minutes').toDate()
     });
     console.log('transaction started', transaction.id);
-    console.log('予約を開始しました', transaction.object.reservations.map((r) => r.price).join(','));
+    console.log('予約を開始しました', transaction.object.reservations.map((r) => r.id).join(','));
     console.log(transaction.object.reservations.map((r) => {
         return `${r.id} ${r.reservationNumber} ${r.reservationStatus} ${r.reservedTicket.underName.name}`
     }).join('\n'));
@@ -125,7 +125,7 @@ async function main() {
         expires: moment().add(5, 'minutes').toDate()
     });
     console.log('transaction started', transaction.id);
-    console.log('予約を開始しました', transaction.object.reservations.map((r) => r.price).join(','));
+    console.log('予約を開始しました', transaction.object.reservations.map((r) => r.id).join(','));
     console.log(transaction.object.reservations.map((r) => {
         return `${r.id} ${r.reservationNumber} ${r.reservationStatus} ${r.reservedTicket.underName.name}`
     }).join('\n'));

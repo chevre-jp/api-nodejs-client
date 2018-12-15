@@ -18,8 +18,9 @@ async function main() {
     });
 
     console.log('checking in...');
-    await reservationService.checkInScreeningEvent({
-        id: '002-181030-000001-0',
+    await reservationService.checkInScreeningEventReservations({
+        // id: '002-181216-000001-2',
+        reservationNumber: '002-181216-000001'
     });
     console.log('checked in');
 }

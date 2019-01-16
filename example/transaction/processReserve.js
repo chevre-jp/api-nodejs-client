@@ -21,16 +21,17 @@ const reserveService = new client.service.transaction.Reserve({
 
 async function main() {
     console.log('searching events...');
-    const events = await eventService.searchScreeningEvents({
+    const events = await eventService.search({
+        typeOf: client.factory.eventType.ScreeningEvent,
         inSessionFrom: new Date(),
         inSessionThrough: moment().add(1, 'month').toDate()
     });
     console.log(events.totalCount, 'events found');
     const selectedEvent = events.data[0];
-    // const selectedEvent = { id: '405gzo3sjooz2tmo' };
+    // const selectedEvent = { id: '7iri100jqrrpxy1' };
 
     console.log('searching ticket types...');
-    const ticketOffers = await eventService.searchScreeningEventTicketOffers({ eventId: selectedEvent.id });
+    const ticketOffers = await eventService.searchTicketOffers({ id: selectedEvent.id });
     console.log('ticketOffers found', ticketOffers.map((o) => o.priceSpecification.priceComponent))
     console.log('チケットオファーは以下の通りです')
     console.log(ticketOffers.map((o) => {
@@ -51,7 +52,7 @@ async function main() {
     }).join('\n'));
 
     console.log('searching offers...');
-    const offers = await eventService.searchScreeningEventOffers({ eventId: selectedEvent.id });
+    const offers = await eventService.searchOffers({ id: selectedEvent.id });
     console.log(offers.length, 'offers found');
     const seatOffers = offers[0].containsPlace;
     console.log(seatOffers.length, 'seatOffers found');

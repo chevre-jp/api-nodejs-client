@@ -17,8 +17,9 @@ async function main() {
     });
 
     console.log('searching offers...');
-    const offers = await eventService.searchScreeningEventTicketOffers({ eventId: '2of644jo71xsqb' });
+    const offers = await eventService.searchTicketOffers({ id: '405gzn39jrrhe7ef' });
     console.log(offers);
+    console.log(offers.map((o) => o.priceSpecification.priceComponent));
 }
 
 main().then(() => {

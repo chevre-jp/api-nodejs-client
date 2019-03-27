@@ -21,7 +21,7 @@ npm install @chevre/api-nodejs-client
 ### Environment variables
 
 | Name    | Required | Value                      | Purpose |
-|---------|----------|----------------------------|---------|
+| ------- | -------- | -------------------------- | ------- |
 | `DEBUG` | false    | chevre-api-nodejs-client:* | Debug   |
 
 ## License

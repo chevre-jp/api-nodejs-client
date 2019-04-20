@@ -66,6 +66,7 @@ async function main() {
 
     console.log('starting transaction...');
     let transaction = await reserveService.start({
+        project: { id: 'sample' },
         typeOf: client.factory.transactionType.Reserve,
         agent: {
             typeOf: 'Person',
@@ -103,6 +104,7 @@ async function main() {
     console.log('transaction canceled');
 
     transaction = await reserveService.start({
+        project: { id: 'sample' },
         typeOf: client.factory.transactionType.Reserve,
         agent: {
             typeOf: 'Person',

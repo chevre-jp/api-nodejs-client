@@ -17,7 +17,8 @@ async function main() {
     });
 
     console.log('searching events...');
-    const { totalCount, data } = await eventService.searchScreeningEvents({
+    const { totalCount, data } = await eventService.search({
+        typeOf: client.factory.eventType.ScreeningEvent,
         inSessionFrom: new Date(),
         inSessionThrough: moment().add(1, 'month').toDate(),
         // superEvent: { ids: ['7i9927kjky5ts19'] },

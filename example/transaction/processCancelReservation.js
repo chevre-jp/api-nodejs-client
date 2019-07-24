@@ -19,17 +19,23 @@ const cancelReservationService = new client.service.transaction.CancelReservatio
     auth: auth
 });
 
+const project = { id: 'cinerino' };
+
 async function main() {
     console.log('starting transaction...');
     const transaction = await cancelReservationService.start({
+        project: project,
         typeOf: client.factory.transactionType.Reserve,
         agent: {
             typeOf: 'Person',
             name: 'agent name'
         },
         object: {
+            // reservation: {
+            //     id: 'CIN135916265720083-0'
+            // },
             transaction: {
-                id: '5bea4bcfb90bcb3e40c95184'
+                id: '5d37abe55c9bd400122d0ad2'
             }
         },
         expires: moment().add(5, 'minutes').toDate()

@@ -19,9 +19,12 @@ const reserveService = new client.service.transaction.Reserve({
     auth: auth
 });
 
+const project = { id: 'cinerino' };
+
 async function main() {
     console.log('searching events...');
     const events = await eventService.search({
+        project: { ids: [project.id] },
         typeOf: client.factory.eventType.ScreeningEvent,
         inSessionFrom: new Date(),
         inSessionThrough: moment().add(1, 'month').toDate()
@@ -32,7 +35,7 @@ async function main() {
 
     console.log('searching ticket types...');
     const ticketOffers = await eventService.searchTicketOffers({ id: selectedEvent.id });
-    console.log('ticketOffers found', ticketOffers.map((o) => o.priceSpecification.priceComponent))
+    console.log(ticketOffers.length, 'ticketOffers found');
     console.log('チケットオファーは以下の通りです')
     console.log(ticketOffers.map((o) => {
         const unitPriceSpecification = o.priceSpecification.priceComponent
@@ -60,13 +63,19 @@ async function main() {
     console.log(availableSeatOffers.length, 'availableSeatOffers found');
 
     const selectedSectionOffer = offers[0];
-    const selectedSeatOffer = availableSeatOffers[0];
+    // const selectedSeatOffer = availableSeatOffers[0];
+    const selectedSeatOffers = availableSeatOffers.slice(0, 2);
     const selectedTicketOffer = ticketOffers[Math.floor(ticketOffers.length * Math.random())];
-    console.log('reserving...', selectedEvent.id, selectedSectionOffer.branchCode, selectedSeatOffer.branchCode, selectedTicketOffer.id);
+    console.log('reserving...',
+        selectedEvent.id,
+        selectedSectionOffer.branchCode,
+        selectedSeatOffers.map((o) => o.branchCode),
+        selectedTicketOffer.id
+    );
 
     console.log('starting transaction...');
     let transaction = await reserveService.start({
-        project: { id: 'sample' },
+        project: { id: project.id },
         typeOf: client.factory.transactionType.Reserve,
         agent: {
             typeOf: 'Person',
@@ -76,15 +85,15 @@ async function main() {
             event: {
                 id: selectedEvent.id
             },
-            acceptedOffer: [
-                {
+            acceptedOffer: selectedSeatOffers.map((o) => {
+                return {
                     id: selectedTicketOffer.id,
                     ticketedSeat: {
-                        seatNumber: selectedSeatOffer.branchCode,
+                        seatNumber: o.branchCode,
                         seatSection: selectedSectionOffer.branchCode
                     }
                 }
-            ],
+            }),
             notes: 'test from samples'
         },
         expires: moment().add(5, 'minutes').toDate()
@@ -104,7 +113,7 @@ async function main() {
     console.log('transaction canceled');
 
     transaction = await reserveService.start({
-        project: { id: 'sample' },
+        project: { id: project.id },
         typeOf: client.factory.transactionType.Reserve,
         agent: {
             typeOf: 'Person',
@@ -114,15 +123,15 @@ async function main() {
             event: {
                 id: selectedEvent.id
             },
-            acceptedOffer: [
-                {
+            acceptedOffer: selectedSeatOffers.map((o) => {
+                return {
                     id: selectedTicketOffer.id,
                     ticketedSeat: {
-                        seatNumber: selectedSeatOffer.branchCode,
+                        seatNumber: o.branchCode,
                         seatSection: selectedSectionOffer.branchCode
                     }
                 }
-            ],
+            }),
             notes: 'test from samples'
         },
         expires: moment().add(5, 'minutes').toDate()

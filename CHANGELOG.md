@@ -18,6 +18,12 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/).
 
 ### Security
 
+## v2.1.0 - 2019-10-24
+
+### Added
+
+- 予約取引に予約ステータス変更時イベントを追加
+
 ## v2.0.0 - 2019-09-29
 
 ### Changed

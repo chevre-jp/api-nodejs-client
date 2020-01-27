@@ -9,6 +9,7 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/).
 ### Added
 
 - メンバーシッププログラム検索を追加
+- 予約ダウンロードを追加
 
 ### Changed
 

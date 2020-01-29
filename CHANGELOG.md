@@ -12,6 +12,7 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/).
 - 予約ダウンロードを追加
 - カテゴリーコードインターフェースを追加
 - カテゴリーコードチャージ仕様インターフェースを追加
+- カテゴリーコードサービスを追加
 
 ### Changed
 

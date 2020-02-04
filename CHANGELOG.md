@@ -13,6 +13,7 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/).
 - カテゴリーコードインターフェースを追加
 - カテゴリーコードチャージ仕様インターフェースを追加
 - カテゴリーコードサービスを追加
+- プロダクトサービスを追加
 
 ### Changed
 

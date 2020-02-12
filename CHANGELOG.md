@@ -24,6 +24,7 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/).
 - サービスタイプをカテゴリーコードに統合
 - オファー適用条件拡張
 - イベントのacceptedOfferを拡張
+- オファーに適用サブ予約条件を追加
 
 ### Deprecated
 

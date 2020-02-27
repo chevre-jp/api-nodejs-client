@@ -18,6 +18,7 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/).
 - スクリーン更新を追加
 - 座席検索を追加
 - 座席更新を追加
+- オファーカテゴリーサービスを追加
 
 ### Changed
 

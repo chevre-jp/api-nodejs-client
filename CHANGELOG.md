@@ -36,6 +36,7 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/).
 ### Deprecated
 
 - 配給サービスをカテゴリーコードサービスへ移行
+- subjectサービスをaccountTitleサービスへ移行
 
 ### Removed
 

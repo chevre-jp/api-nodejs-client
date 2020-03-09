@@ -33,6 +33,7 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/).
 - オファーに有効期間を追加
 - 自由席許可属性を場所インターフェースに追加
 - subjectサービスをaccountTitleサービスへ移行
+- 券種検索条件をオファー検索条件に統合
 
 ### Deprecated
 

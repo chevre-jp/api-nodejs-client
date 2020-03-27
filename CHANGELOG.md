@@ -8,6 +8,20 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/).
 
 ### Added
 
+### Changed
+
+### Deprecated
+
+### Removed
+
+### Fixed
+
+### Security
+
+## v3.0.0 - 2020-03-27
+
+### Added
+
 - メンバーシッププログラム検索を追加
 - 予約ダウンロードを追加
 - カテゴリーコードインターフェースを追加
@@ -45,10 +59,6 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/).
 - 興行区分サービスを削除
 - 配給区分サービスを削除
 - オファーカテゴリー検索を削除
-
-### Fixed
-
-### Security
 
 ## v2.1.0 - 2019-10-24
 

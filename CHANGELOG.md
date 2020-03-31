@@ -8,6 +8,15 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/).
 
 ### Added
 
+- 座席作成を追加
+- 座席削除を追加
+- スクリーン作成を追加
+- スクリーン削除を追加
+- スクリーンセクション作成を追加
+- スクリーンセクション検索を追加
+- スクリーンセクション更新を追加
+- スクリーンセクション削除を追加
+
 ### Changed
 
 ### Deprecated

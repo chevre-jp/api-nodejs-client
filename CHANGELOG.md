@@ -8,15 +8,6 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/).
 
 ### Added
 
-- 座席作成を追加
-- 座席削除を追加
-- スクリーン作成を追加
-- スクリーン削除を追加
-- スクリーンセクション作成を追加
-- スクリーンセクション検索を追加
-- スクリーンセクション更新を追加
-- スクリーンセクション削除を追加
-
 ### Changed
 
 ### Deprecated
@@ -26,6 +17,19 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/).
 ### Fixed
 
 ### Security
+
+## v3.1.0 - 2020-03-31
+
+### Added
+
+- 座席作成を追加
+- 座席削除を追加
+- スクリーン作成を追加
+- スクリーン削除を追加
+- スクリーンセクション作成を追加
+- スクリーンセクション検索を追加
+- スクリーンセクション更新を追加
+- スクリーンセクション削除を追加
 
 ## v3.0.0 - 2020-03-27
 

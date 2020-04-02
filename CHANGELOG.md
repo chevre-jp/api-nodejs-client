@@ -8,7 +8,11 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/).
 
 ### Added
 
+- イベントに固有のキャパシティ設定を追加
+
 ### Changed
+
+- オファーに供給者属性を追加
 
 ### Deprecated
 

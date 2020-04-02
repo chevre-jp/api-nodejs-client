@@ -18,6 +18,16 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/).
 
 ### Security
 
+## v3.2.0 - 2020-04-02
+
+### Added
+
+- イベントに固有のキャパシティ設定を追加
+
+### Changed
+
+- オファーに供給者属性を追加
+
 ## v3.1.0 - 2020-03-31
 
 ### Added

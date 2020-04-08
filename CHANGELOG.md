@@ -18,6 +18,12 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/).
 
 ### Security
 
+## v3.4.0 - 2020-04-08
+
+### Added
+
+- イベントの座席オファーのページング検索機能を追加
+
 ## v3.3.0 - 2020-04-08
 
 ### Added

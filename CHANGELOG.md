@@ -9,6 +9,8 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/).
 ### Added
 
 - サービス登録取引を追加
+- 通貨転送取引を追加
+- サービスアウトプットサービスを追加
 
 ### Changed
 

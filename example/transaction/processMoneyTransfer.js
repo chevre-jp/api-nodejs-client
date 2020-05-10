@@ -31,7 +31,7 @@ async function main() {
             //     name: 'fromLocation'
             // },
             fromLocation: {
-                typeOf: 'PrepaidCard',
+                typeOf: 'PrepaidPaymentCard',
                 identifier: '50022500006',
                 accessCode: '123'
             },
@@ -39,7 +39,7 @@ async function main() {
             //     name: 'toLocation'
             // },
             toLocation: {
-                typeOf: 'PrepaidCard',
+                typeOf: 'PrepaidPaymentCard',
                 identifier: '80205600010',
                 accessCode: '123'
             },

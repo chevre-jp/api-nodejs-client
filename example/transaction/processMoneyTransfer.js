@@ -18,8 +18,11 @@ const moneyTransferService = new client.service.transaction.MoneyTransfer({
 
 const project = { id: 'cinerino' };
 
+const transactionNumber = `CIN${(new Date()).valueOf()}`;
+
 async function main() {
     let transaction = await moneyTransferService.start({
+        transactionNumber: transactionNumber,
         project: { id: project.id },
         agent: { typeOf: 'Person', name: 'Agent' },
         recipient: { typeOf: 'Person', name: 'Recipient' },
@@ -32,7 +35,7 @@ async function main() {
             // },
             fromLocation: {
                 typeOf: 'PrepaidPaymentCard',
-                identifier: '50022500006',
+                identifier: 'CIN158937572108700',
                 accessCode: '123'
             },
             // toLocation: {
@@ -40,18 +43,21 @@ async function main() {
             // },
             toLocation: {
                 typeOf: 'PrepaidPaymentCard',
-                identifier: '80205600010',
+                identifier: 'CIN158910858422100',
                 accessCode: '123'
             },
-            description: 'sample'
+            description: 'sample',
+            pendingTransaction: {
+                typeOf: 'Deposit'
+            }
         },
         expires: moment().add(5, 'minutes').toDate()
     });
-    console.log('transaction started', transaction.id);
+    console.log('transaction started', transactionNumber);
 
     // 確定
     await moneyTransferService.confirm({
-        id: transaction.id,
+        transactionNumber: transactionNumber
     });
     console.log('transaction confirmed');
 }

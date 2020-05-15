@@ -18,29 +18,35 @@ const registerService = new client.service.transaction.RegisterService({
 
 const project = { id: 'cinerino' };
 
-const identifier = `CIN${(new Date()).valueOf()}`;
-const accessCode = '123';
+const product = { id: '5ebbf3f9416bbf0ea4d39639' };
+
+const transactionNumber = `CIN${(new Date()).valueOf()}`;
+const identifier = 'CIN158937572108700';
 
 async function main() {
     console.log('starting transaction...identifier:', identifier);
     let transaction = await registerService.start({
-        project: { id: project.id },
-        typeOf: client.factory.transactionType.RegisterService,
+        transactionNumber: transactionNumber,
         agent: {
             typeOf: 'Person',
             name: 'agent name'
         },
-        object: [{
-            id: '7k740xps6',
-            itemOffered: {
-                id: '5eaf98ecbcba1736247577b0',
-                serviceOutput: {
-                    identifier: identifier,
-                    accessCode: accessCode,
-                    name: 'プリペ'
+        project: { id: project.id },
+        typeOf: client.factory.transactionType.RegisterService,
+        object: [
+            {
+                // 7iri85wk5ggjsmg
+                id: '7k740xps7',
+                itemOffered: {
+                    id: product.id,
+                    serviceOutput: {
+                        toLocation: {
+                            identifier: identifier
+                        }
+                    }
                 }
             }
-        }],
+        ],
         expires: moment().add(5, 'minutes').toDate()
     });
     console.log('transaction started', transaction.id);

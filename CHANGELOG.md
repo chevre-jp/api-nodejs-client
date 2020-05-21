@@ -16,6 +16,8 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/).
 
 ### Changed
 
+- 予約取引を取引番号で確定できるように調整
+
 ### Deprecated
 
 ### Removed

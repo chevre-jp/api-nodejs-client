@@ -11,6 +11,8 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/).
 - サービス登録取引を追加
 - 通貨転送取引を追加
 - サービスアウトプットサービスを追加
+- 決済取引サービスを追加
+- 取引番号サービスを追加
 
 ### Changed
 

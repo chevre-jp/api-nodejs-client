@@ -18,6 +18,20 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/).
 
 ### Security
 
+## v3.8.0 - 2020-05-22
+
+### Added
+
+- サービス登録取引を追加
+- 通貨転送取引を追加
+- サービスアウトプットサービスを追加
+- 決済取引サービスを追加
+- 取引番号サービスを追加
+
+### Changed
+
+- 予約取引を取引番号で確定できるように調整
+
 ## v3.7.0 - 2020-04-27
 
 ### Added

@@ -8,8 +8,6 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/).
 
 ### Added
 
-- 劇場に親組織を追加
-
 ### Changed
 
 ### Deprecated
@@ -19,6 +17,12 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/).
 ### Fixed
 
 ### Security
+
+## v3.9.0 - 2020-05-24
+
+### Added
+
+- 劇場に親組織を追加
 
 ## v3.8.0 - 2020-05-22
 

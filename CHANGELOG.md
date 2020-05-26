@@ -18,6 +18,12 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/).
 
 ### Security
 
+## v3.10.0 - 2020-05-26
+
+### Added
+
+- 1トランザクションでの予約取消取引処理を追加
+
 ## v3.9.0 - 2020-05-24
 
 ### Added

@@ -10,8 +10,6 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/).
 
 ### Changed
 
-- サービス登録取引を取引番号で確定できるように調整
-
 ### Deprecated
 
 ### Removed
@@ -19,6 +17,12 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/).
 ### Fixed
 
 ### Security
+
+## v3.13.0 - 2020-06-11
+
+### Changed
+
+- サービス登録取引を取引番号で確定できるように調整
 
 ## v3.12.0 - 2020-06-11
 

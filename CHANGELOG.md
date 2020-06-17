@@ -18,6 +18,12 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/).
 
 ### Security
 
+## v3.16.0 - 2020-06-17
+
+### Added
+
+- プロジェクト作成を追加
+
 ## v3.15.0 - 2020-06-16
 
 ### Changed

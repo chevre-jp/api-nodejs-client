@@ -18,6 +18,12 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/).
 
 ### Security
 
+## v3.18.0 - 2020-06-30
+
+### Changed
+
+- update @chevre/api-abstract-client
+
 ## v3.17.0 - 2020-06-24
 
 ### Added

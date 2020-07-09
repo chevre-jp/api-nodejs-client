@@ -18,6 +18,16 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/).
 
 ### Security
 
+## v3.20.0 - 2020-07-09
+
+### Added
+
+- プロジェクトにペイメントサービス設定を追加
+
+### Changed
+
+- MGTicketインターフェースをMovieTicketインターフェースに統合
+
 ## v3.19.0 - 2020-07-08
 
 ### Changed

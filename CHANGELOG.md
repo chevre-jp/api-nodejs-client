@@ -8,7 +8,11 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/).
 
 ### Added
 
+- プロジェクトにペイメントサービス設定を追加
+
 ### Changed
+
+- MGTicketインターフェースをMovieTicketインターフェースに統合
 
 ### Deprecated
 

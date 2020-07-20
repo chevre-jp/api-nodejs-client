@@ -1,6 +1,6 @@
 {
   "name": "@chevre/api-nodejs-client",
-  "version": "3.21.1",
+  "version": "3.22.0",
   "description": "Chevre API Client Library for Node.js",
   "main": "./lib/index.js",
   "types": "./lib/index.d.ts",

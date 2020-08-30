@@ -8,6 +8,8 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/).
 
 ### Added
 
+- 返金取引を追加
+
 ### Changed
 
 ### Deprecated

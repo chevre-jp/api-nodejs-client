@@ -43,20 +43,22 @@ async function main() {
             paymentMethod: {
                 typeOf: paymentMethodType,
                 amount: 10,
-                additionalProperty: [],
+                additionalProperty: [{ name: 'sampleName', value: 'sampleValue' }],
                 method: '1',
                 creditCard: {
+                    // token: 'token',
                     cardNo: '4111111111111111',
                     expire: '2411',
                     holderName: 'A B'
-                }
+                },
+                name: 'クレカ'
             }
         },
         expires: moment()
             .add(5, 'minutes')
             .toDate()
     });
-    console.log('transaction started', transaction.id);
+    console.log('transaction started', transaction);
 
     // 確定
     await payService.confirm({

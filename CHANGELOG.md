@@ -10,6 +10,8 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/).
 
 ### Changed
 
+- 不要なtotalCount属性を削除
+
 ### Deprecated
 
 ### Removed

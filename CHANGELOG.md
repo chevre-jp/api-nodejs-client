@@ -18,6 +18,12 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/).
 
 ### Security
 
+## v3.30.0 - 2020-09-03
+
+### Changed
+
+- 不要なtotalCount属性を削除
+
 ## v3.29.0 - 2020-09-03
 
 ### Changed

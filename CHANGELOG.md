@@ -18,6 +18,12 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/).
 
 ### Security
 
+## v3.34.1 - 2020-09-09
+
+### Fixed
+
+- 決済方法認証サービスのパラメータを修正
+
 ## v3.34.0 - 2020-09-09
 
 ### Added

@@ -16,12 +16,13 @@ async function main() {
         auth: authClient
     });
 
-    const { totalCount, data } = await sellerService.search({
-        project: { id: { $eq: 'cinerino' } },
+    const { data } = await sellerService.search({
+        project: { id: { $eq: 'sskts-development' } },
+        additionalProperty: { $in: [{ name: 'branchCode', value: '120' }] },
         $projection: { name: 0, parentOrganization: 0, 'paymentAccepted.gmoInfo.shopPass': 0 }
     });
     console.log(data);
-    console.log(totalCount, 'sellers found');
+    console.log(data.length);
 }
 
 main().then(() => {

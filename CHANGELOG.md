@@ -10,6 +10,9 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/).
 
 ### Changed
 
+- プロダクトインターフェースを決済サービスにも拡張
+- プロダクト検索条件拡張
+
 ### Deprecated
 
 ### Removed

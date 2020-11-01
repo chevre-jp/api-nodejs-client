@@ -10,6 +10,9 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/).
 
 ### Changed
 
+- プロジェクトにsubscriptionを追加
+- ペイメントサービスインターフェースをプロダクトとして拡張
+
 ### Deprecated
 
 ### Removed

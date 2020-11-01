@@ -10,9 +10,6 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/).
 
 ### Changed
 
-- プロジェクトにsubscriptionを追加
-- ペイメントサービスインターフェースをプロダクトとして拡張
-
 ### Deprecated
 
 ### Removed
@@ -20,6 +17,13 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/).
 ### Fixed
 
 ### Security
+
+## v3.44.1 - 2020-11-01
+
+### Changed
+
+- プロジェクトにsubscriptionを追加
+- ペイメントサービスインターフェースをプロダクトとして拡張
 
 ## v3.44.0 - 2020-10-31
 

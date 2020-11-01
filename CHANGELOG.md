@@ -18,6 +18,13 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/).
 
 ### Security
 
+## v3.44.1 - 2020-11-01
+
+### Changed
+
+- プロジェクトにsubscriptionを追加
+- ペイメントサービスインターフェースをプロダクトとして拡張
+
 ## v3.44.0 - 2020-10-31
 
 - プロダクトインターフェースを決済サービスにも拡張

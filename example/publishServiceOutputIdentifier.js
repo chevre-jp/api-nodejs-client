@@ -1,5 +1,7 @@
 const client = require('../lib/');
 
+const project = { id: 'cinerino' };
+
 async function main() {
     const authClient = new client.auth.ClientCredentials({
         domain: process.env.TEST_AUTHORIZE_SERVER_DOMAIN,
@@ -7,15 +9,16 @@ async function main() {
         clientSecret: process.env.TEST_CLIENT_SECRET,
         scopes: []
     });
-    const identifierService = new client.service.ServiceOutputIdentifier({
+    const outputService = new client.service.ServiceOutput({
         endpoint: process.env.TEST_API_ENDPOINT,
         auth: authClient
     });
 
-    const result = await identifierService.publish({
-        project: { id: 'cinerino' }
-    });
+    const result = await outputService.publishIdentifier([...Array(100)].map(() => {
+        return { project };
+    }));
     console.log(result);
+    console.log(result.length, 'identifiers published');
 }
 
 main().then(() => {

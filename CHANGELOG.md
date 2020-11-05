@@ -16,6 +16,8 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/).
 
 ### Fixed
 
+- サービスアウトプット識別子発行のパラメータ修正
+
 ### Security
 
 ## v3.45.0 - 2020-11-05

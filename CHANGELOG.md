@@ -18,6 +18,13 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/).
 
 ### Security
 
+## v3.47.0 - 2020-11-19
+
+### Added
+
+- イベント削除を追加
+- 価格仕様削除を追加
+
 ## v3.46.0 - 2020-11-19
 
 ### Added

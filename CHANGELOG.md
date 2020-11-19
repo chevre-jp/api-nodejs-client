@@ -8,11 +8,7 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/).
 
 ### Added
 
-- カテゴリーコード削除を追加
-
 ### Changed
-
-- update @chevre/factory
 
 ### Deprecated
 
@@ -21,6 +17,16 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/).
 ### Fixed
 
 ### Security
+
+## v3.46.0 - 2020-11-19
+
+### Added
+
+- カテゴリーコード削除を追加
+
+### Changed
+
+- update @chevre/factory
 
 ## v3.45.4 - 2020-11-18
 

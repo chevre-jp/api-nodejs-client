@@ -8,9 +8,6 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/).
 
 ### Added
 
-- イベント削除を追加
-- 価格仕様削除を追加
-
 ### Changed
 
 ### Deprecated
@@ -20,6 +17,13 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/).
 ### Fixed
 
 ### Security
+
+## v3.47.0 - 2020-11-19
+
+### Added
+
+- イベント削除を追加
+- 価格仕様削除を追加
 
 ## v3.46.0 - 2020-11-19
 

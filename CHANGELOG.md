@@ -8,8 +8,6 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/).
 
 ### Added
 
-- 勘定科目削除を追加
-
 ### Changed
 
 ### Deprecated
@@ -19,6 +17,12 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/).
 ### Fixed
 
 ### Security
+
+## v3.52.0 - 2020-11-24
+
+### Added
+
+- 勘定科目削除を追加
 
 ## v3.51.0 - 2020-11-24
 

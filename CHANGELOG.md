@@ -10,8 +10,6 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/).
 
 ### Changed
 
-- カテゴリーコード検索条件拡張
-
 ### Deprecated
 
 ### Removed
@@ -19,6 +17,12 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/).
 ### Fixed
 
 ### Security
+
+## v3.51.0 - 2020-11-24
+
+### Changed
+
+- カテゴリーコード検索条件拡張
 
 ## v3.50.0 - 2020-11-21
 

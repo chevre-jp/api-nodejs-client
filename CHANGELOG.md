@@ -10,11 +10,6 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/).
 
 ### Changed
 
-- ルームに検索条件を定義
-- ルームセクションに検索条件を定義
-- 座席に名称を追加
-- オファー検索条件拡張
-
 ### Deprecated
 
 ### Removed
@@ -22,6 +17,15 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/).
 ### Fixed
 
 ### Security
+
+## v3.53.0 - 2020-11-25
+
+### Changed
+
+- ルームに検索条件を定義
+- ルームセクションに検索条件を定義
+- 座席に名称を追加
+- オファー検索条件拡張
 
 ## v3.52.0 - 2020-11-24
 

@@ -8,8 +8,6 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/).
 
 ### Added
 
-- ペイメントサービスにproviderを追加
-
 ### Changed
 
 ### Deprecated
@@ -19,6 +17,12 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/).
 ### Fixed
 
 ### Security
+
+## v3.54.0 - 2020-12-01
+
+### Added
+
+- ペイメントサービスにproviderを追加
 
 ## v3.53.0 - 2020-11-25
 

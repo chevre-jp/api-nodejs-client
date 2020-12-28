@@ -18,6 +18,12 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/).
 
 ### Security
 
+## v3.56.0 - 2020-12-28
+
+### Changed
+
+- イベント入場サービスを予約使用サービスに変更
+
 ## v3.55.2 - 2020-12-17
 
 ### Changed

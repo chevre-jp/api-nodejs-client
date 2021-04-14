@@ -8,6 +8,9 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/).
 
 ### Added
 
+- 経理レポートサービスを追加
+- 売上レポートサービスを追加
+
 ### Changed
 
 ### Deprecated

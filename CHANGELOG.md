@@ -18,6 +18,13 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/).
 
 ### Security
 
+## v3.61.0 - 2021-04-14
+
+### Added
+
+- 経理レポートサービスを追加
+- 売上レポートサービスを追加
+
 ## v3.60.0 - 2021-04-12
 
 ### Added

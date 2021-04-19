@@ -8,9 +8,6 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/).
 
 ### Added
 
-- 承認発行を追加
-- 所有権発行を追加
-
 ### Changed
 
 ### Deprecated
@@ -20,6 +17,13 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/).
 ### Fixed
 
 ### Security
+
+## v3.64.0 - 2021-04-19
+
+### Added
+
+- 承認発行を追加
+- 所有権発行を追加
 
 ## v3.63.0 - 2021-04-18
 

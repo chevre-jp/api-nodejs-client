@@ -8,6 +8,9 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/).
 
 ### Added
 
+- 承認発行を追加
+- 所有権発行を追加
+
 ### Changed
 
 ### Deprecated

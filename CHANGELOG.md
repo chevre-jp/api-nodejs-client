@@ -10,8 +10,6 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/).
 
 ### Changed
 
-- サービスインスタンスにプロジェクトを指定できるように調整
-
 ### Deprecated
 
 ### Removed
@@ -19,6 +17,12 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/).
 ### Fixed
 
 ### Security
+
+## v3.70.1 - 2021-05-04
+
+### Changed
+
+- サービスインスタンスにプロジェクトを指定できるように調整
 
 ## v3.70.0 - 2021-05-03
 

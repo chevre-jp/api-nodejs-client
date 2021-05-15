@@ -18,6 +18,12 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/).
 
 ### Security
 
+## v3.73.0 - 2021-05-15
+
+### Added
+
+- ユーザープールサービスを追加
+
 ## v3.72.0 - 2021-05-13
 
 ### Added

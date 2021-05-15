@@ -13,11 +13,12 @@ async function main() {
 
     const sellerService = new client.service.Seller({
         endpoint: process.env.TEST_API_ENDPOINT,
-        auth: authClient
+        auth: authClient,
+        project: { id: 'cinerino' }
     });
 
     const { data } = await sellerService.search({
-        project: { id: { $eq: 'sskts-development' } },
+        // project: { id: { $eq: 'sskts-development' } },
         additionalProperty: { $in: [{ name: 'branchCode', value: '120' }] },
         $projection: { name: 0, parentOrganization: 0, 'paymentAccepted.gmoInfo.shopPass': 0 }
     });

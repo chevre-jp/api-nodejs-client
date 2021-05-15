@@ -8,8 +8,6 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/).
 
 ### Added
 
-- ユーザープールサービスを追加
-
 ### Changed
 
 ### Deprecated
@@ -19,6 +17,12 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/).
 ### Fixed
 
 ### Security
+
+## v3.73.0 - 2021-05-15
+
+### Added
+
+- ユーザープールサービスを追加
 
 ## v3.72.0 - 2021-05-13
 

@@ -8,9 +8,6 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/).
 
 ### Added
 
-- 口座検索を追加
-- 口座アクション検索(口座番号指定)を追加
-
 ### Changed
 
 ### Deprecated
@@ -20,6 +17,13 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/).
 ### Fixed
 
 ### Security
+
+## v3.75.0 - 2021-05-18
+
+### Added
+
+- 口座検索を追加
+- 口座アクション検索(口座番号指定)を追加
 
 ## v3.74.0 - 2021-05-18
 

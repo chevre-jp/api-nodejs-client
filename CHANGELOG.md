@@ -8,6 +8,9 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/).
 
 ### Added
 
+- 口座開設を追加
+- 口座解約を追加
+
 ### Changed
 
 ### Deprecated

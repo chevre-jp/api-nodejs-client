@@ -18,6 +18,13 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/).
 
 ### Security
 
+## v3.79.0 - 2021-05-24
+
+### Changed
+
+- 注文検索条件拡張
+- 所有権検索において所有物詳細も取得できるように調整
+
 ## v3.78.0 - 2021-05-23
 
 ### Added

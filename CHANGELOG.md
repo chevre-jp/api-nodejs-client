@@ -10,6 +10,9 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/).
 
 ### Changed
 
+- 注文検索条件拡張
+- 所有権検索において所有物詳細も取得できるように調整
+
 ### Deprecated
 
 ### Removed

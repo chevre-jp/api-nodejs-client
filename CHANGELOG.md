@@ -8,8 +8,6 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/).
 
 ### Added
 
-- 予約に対する使用アクション検索を追加
-
 ### Changed
 
 ### Deprecated
@@ -19,6 +17,12 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/).
 ### Fixed
 
 ### Security
+
+## v3.80.0 - 2021-05-27
+
+### Added
+
+- 予約に対する使用アクション検索を追加
 
 ## v3.79.1 - 2021-05-27
 

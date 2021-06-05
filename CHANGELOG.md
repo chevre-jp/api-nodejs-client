@@ -18,6 +18,12 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/).
 
 ### Security
 
+## v3.84.0 - 2021-06-05
+
+### Changed
+
+- イベント部分更新後にメール送信タスクを設定できるように調整
+
 ## v3.83.2 - 2021-06-04
 
 ### Changed

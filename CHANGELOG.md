@@ -18,6 +18,12 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/).
 
 ### Security
 
+## v3.84.4 - 2021-06-10
+
+### Changed
+
+- 資産取引のルーティング調整
+
 ## v3.84.3 - 2021-06-10
 
 ### Changed

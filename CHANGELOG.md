@@ -18,6 +18,12 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/).
 
 ### Security
 
+## v3.84.3 - 2021-06-10
+
+### Changed
+
+- update @chevre/factory
+
 ## v3.84.2 - 2021-06-10
 
 ### Changed
